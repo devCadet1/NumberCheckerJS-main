@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Number Checker</title>
+</head>
+<body>
+    <h1>Number Validator</h1>
+
+    <input type="number" id="input">
+    <button onclick="check()">Submit</button>
+    <button onclick="reload()">Reset</button>
+    <h3 id="res"></h3>
+
+
+    <script> 
+        function check () {
+            let num = document.getElementById('input').value;
+            let text;
+            if (isNaN(num) || num < 1 || num > 10) {
+                text = "Input not valid";
+            } else {
+                text = `You have entered ${num}`
+            }
+            document.getElementById('res').innerHTML = text;
+        }
+
+        function reload() {
+            window.location.reload();
+        }
+
+        
+        
+    </script>    
+
+    
+</body>
+</html>
